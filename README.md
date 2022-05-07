@@ -19,6 +19,7 @@ Le token de l'application
 Installation du bot et de ses dépendances
 ```
 git clone https://github.com/xMeax/Bot-Terra-Bellum
+cd Bot-Terra-Bellum
 npm install
 ```
 Créez un fichier `.env` à la racine contenant les données suivantes :

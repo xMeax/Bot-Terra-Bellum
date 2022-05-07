@@ -1,6 +1,8 @@
 const { Client, Intents } = require('discord.js')
 require('dotenv').config()
 
+const moderation = require('./commands/moderation')
+
 const CLIENT = new Client({
     intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES],
     partials: [ "MESSAGE", "CHANNEL" ]
@@ -20,7 +22,7 @@ CLIENT.on("messageCreate", (msg) => {
 
     const commands = new Map([
         ['ping', () => msg.channel.send("Pong")],
-        [],
+        ['soyouz', () => moderation.Soyouz(msg)],
     ])
 
     commands.get(command).call()
